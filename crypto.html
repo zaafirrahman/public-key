@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wallets</title>
+  <link rel="stylesheet" href="crypto.css" />
+  <!-- Font Awesome Free -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+</head>
+<body>
+
+  <main class="container">
+    <h1>Public Keys</h1>
+    <p class="subtitle">Addresses for verification & transfer</p>
+
+    <section class="card">
+      <div class="row">
+        <div class="left">
+          <img src="btc.svg" alt="Bitcoin" class="icon">
+          <span class="label">Bitcoin</span>
+        </div>
+
+        <!-- Icon wrapper -->
+        <div class="actions">
+          <!-- COPY -->
+          <i class="fa-regular fa-copy copy-btn"
+            data-address="bc1qv4ffj09m75z226rh2vzsyyg046uzgchnqryckh"></i>
+
+          <!-- QR VIEW -->
+          <i class="fa-solid fa-qrcode qr-btn"
+            data-qr="btc-qr.jpeg"></i>
+
+          <!-- EXPLORE -->
+          <a href="https://mempool.space/address/bc1qv4ffj09m75z226rh2vzsyyg046uzgchnqryckh"
+            target="_blank"
+            class="explore-btn">
+            <i class="fa-solid fa-square-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <code>bc1qv4ffj09m75z226rh2vzsyyg046uzgchnqryckh</code>
+    </section>
+
+
+    <section class="card">
+      <div class="row">
+        <div class="left">
+          <img src="eth.svg" alt="Ethereum" class="icon">
+          <span class="label">Ethereum</span>
+        </div>
+
+        <!-- Icon wrapper -->
+        <div class="actions">
+          <!-- COPY -->
+          <i class="fa-regular fa-copy copy-btn"
+            data-address="0x9fac00154130f5d13219fafe7e30cc841cc42f8a"></i>
+
+          <!-- QR VIEW -->
+          <i class="fa-solid fa-qrcode qr-btn"
+            data-qr="eth-qr.jpeg"></i>
+
+          <!-- EXPLORE -->
+          <a href="https://etherscan.io/address/0x9fac00154130f5d13219fafe7e30cc841cc42f8a"
+            target="_blank"
+            class="explore-btn">
+            <i class="fa-solid fa-square-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <code>0x9fac00154130f5d13219fafe7e30cc841cc42f8a</code>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <div class="left">
+          <img src="sol.svg" alt="Solana" class="icon">
+          <span class="label">Solana</span>
+        </div>
+
+        <!-- Icon wrapper -->
+        <div class="actions">
+          <!-- COPY -->
+          <i class="fa-regular fa-copy copy-btn"
+            data-address="GWss5x6Pp9txSuCbw9nCQgqwD1MtSyT7TC5VGBdyTGrG"></i>
+
+          <!-- QR VIEW -->
+          <i class="fa-solid fa-qrcode qr-btn"
+            data-qr="sol-qr.jpeg"></i>
+
+          <!-- EXPLORE -->
+          <a href="https://solscan.io/account/GWss5x6Pp9txSuCbw9nCQgqwD1MtSyT7TC5VGBdyTGrG"
+            target="_blank"
+            class="explore-btn">
+            <i class="fa-solid fa-square-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <code>GWss5x6Pp9txSuCbw9nCQgqwD1MtSyT7TC5VGBdyTGrG</code>
+    </section>
+
+  </main>
+
+  <div class="qr-modal" id="qrModal">
+    <div class="qr-box">
+      <span id="closeModal">&times;</span>
+      <img id="qrImage" src="" alt="QR Code">
+    </div>
+  </div>
+
+  <div id="toast">Address copied!</div>
+
+  <script src="crypto.js"></script>
+
+</body>
+</html>

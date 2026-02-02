@@ -1,0 +1,197 @@
+:root {
+  --bg: #0f172a;          /* slate-900 */
+  --card: #020617;        /* almost black */
+  --text: #e5e7eb;        /* gray-200 */
+  --muted: #94a3b8;       /* gray-400 */
+  --accent: #38bdf8;      /* sky-400 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  max-width: 720px;
+  margin: 64px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.verify {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.verify:hover {
+  text-decoration: underline;
+}
+
+code {
+  display: block;
+  background: rgba(255,255,255,0.04);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-family: 'FreeMono', monospace;
+  font-size: 13px;
+  word-break: break-all;
+  color: #e2e8f0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* kiri dan kanan */
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 17px; /* jarak antar icon */
+  align-items: center;
+}
+
+/* optional: ukuran icon */
+.actions i {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.actions i {
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 12px;
+  transition: 0.2s;
+}
+
+.actions i:hover {
+  transform: scale(1.2);
+  color: orange;
+}
+
+/* Modal background */
+.qr-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.qr-box {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.qr-box img {
+  width: 200px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.actions a {
+  color: white;        /* tetap putih */
+  text-decoration: none; /* hilangin underline */
+}
+
+.actions a:visited {
+  color: white; /* habis diklik tetep putih */
+}
+
+.actions a:hover {
+  color: orange; /* optional efek hover */
+}
+
+.actions a i {
+  color: inherit;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 200px;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 17px;
+  font-weight: bold;
+  z-index: 9999;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
